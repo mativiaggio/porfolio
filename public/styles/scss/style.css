@@ -1,0 +1,471 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+:root {
+  --user-button-circle: rgba(0, 0, 0, 0.025);
+  --user-button-cardborder: rgba(255, 255, 255, 0.25);
+  --user-button-text: #323133;
+  --user-button-shadow: rgba(0, 0, 0, 0.1);
+}
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/*
+    2. Remove default margin
+  */
+* {
+  margin: 0;
+}
+
+/*
+    3. Allow percentage-based heights in the application
+  */
+html,
+body {
+  height: 100%;
+}
+
+/*The following line prevents the navbar to obscure the elements.*/
+html {
+  scroll-padding-top: 55px;
+  scroll-behavior: smooth !important;
+  /* height of sticky navbar */
+}
+
+/*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/*
+    6. Improve media defaults
+  */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/*
+    7. Remove built-in form typography styles
+  */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/*
+    8. Avoid text overflows
+  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/*
+    9. Create a root stacking context
+  */
+#root,
+#__next {
+  isolation: isolate;
+}
+
+body {
+  height: 500vh;
+  background-color: hsl(0, 0%, 11%) !important;
+  margin: 0;
+  font-family: "Montserrat", sans-serif !important;
+  color: hsl(0, 0%, 100%) !important;
+}
+
+.smooth-transition {
+  transition: opacity 1s ease-in-out !important;
+}
+
+.disabled:hover {
+  cursor: not-allowed !important;
+}
+.disabled a:hover {
+  cursor: not-allowed !important;
+}
+
+.navbar {
+  background-color: hsl(0, 0%, 11%) !important;
+  /* State when the navbar is collapsed */
+  /* when navigation is clicked */
+  /* Color of 3 lines */
+}
+@media screen and (max-width: 62em) {
+  .navbar {
+    background-color: hsl(0, 0%, 11%) !important;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .navbar .nav-link {
+    text-align: left;
+  }
+  .navbar .nav-link:hover {
+    background-color: transparent !important;
+  }
+  .navbar .dropdown-menu {
+    width: 100% !important;
+    background-color: transparent;
+    color: hsl(0, 0%, 100%);
+    align-items: left !important;
+    text-align: left !important;
+  }
+  .navbar .dropdown-menu li {
+    width: 150px;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    padding: 0 !important;
+  }
+  .navbar .dropdown-menu .dropdown-item {
+    text-align: center;
+    color: hsl(0, 0%, 100%) !important;
+    margin-right: 5mm;
+    border-radius: 50px;
+  }
+  .navbar .dropdown-menu .dropdown-item:hover {
+    background-color: transparent;
+  }
+  .navbar #english-option-container,
+  .navbar #spanish-option-container {
+    padding: 0 !important;
+  }
+  .navbar #english-option-container::after,
+  .navbar #spanish-option-container::after {
+    position: absolute;
+    content: "";
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: hsl(0, 0%, 100%) !important;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.5s;
+  }
+}
+.navbar #svg-logo {
+  margin-right: 5mm;
+}
+.navbar .main-nav-div {
+  padding: 0 20mm 0 20mm;
+}
+.navbar .navbar-brand {
+  color: hsl(0, 0%, 100%);
+}
+.navbar .nav-item {
+  margin-right: 5mm;
+}
+.navbar .nav-link {
+  border-radius: 50px;
+  border: 1px solid transparent;
+  font-style: normal !important;
+  font-weight: 400 !important;
+  font-size: 16px !important;
+  line-height: 19px !important;
+  color: hsl(0, 0%, 100%) !important;
+  text-transform: uppercase;
+  position: relative;
+  display: block;
+  padding: 4px 0;
+  transition: 0.5s;
+}
+.navbar .nav-link::after {
+  position: absolute;
+  content: "";
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: hsl(0, 0%, 100%);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.5s;
+}
+.navbar .nav-link:hover {
+  color: hsl(0, 0%, 100%) !important;
+}
+.navbar .nav-link:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+.navbar .dropdown-menu {
+  border-color: transparent;
+}
+.navbar .dropdown-menu li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5mm 0 5mm;
+}
+.navbar .dropdown-menu li a {
+  color: black !important;
+}
+.navbar .dropdown-menu .dropdown-item {
+  padding: 0;
+  text-align: center;
+  justify-content: center;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.navbar .dropdown-menu .dropdown-item:focus {
+  background-color: hsl(0, 0%, 100%) !important;
+  color: hsl(0, 0%, 11%) !important;
+}
+.navbar .dropdown-menu .dropdown-item:hover {
+  background-color: transparent !important;
+}
+.navbar .dropdown-menu #english-option-container,
+.navbar .dropdown-menu #spanish-option-container {
+  display: flex;
+  padding: 0 2mm 0 2mm !important;
+  text-transform: uppercase;
+  position: relative;
+  padding: 4px 0;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.navbar .dropdown-menu #english-option-container::after,
+.navbar .dropdown-menu #spanish-option-container::after {
+  position: absolute;
+  content: "";
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: hsl(0, 0%, 11%);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.5s;
+}
+.navbar .dropdown-menu #english-option-container:hover,
+.navbar .dropdown-menu #spanish-option-container:hover {
+  color: hsl(0, 0%, 100%) !important;
+}
+.navbar .dropdown-menu #english-option-container:hover::after,
+.navbar .dropdown-menu #spanish-option-container:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+.navbar .dropdown-menu #english-option-container {
+  margin-bottom: 8px !important;
+}
+.navbar .dropdown-menu #english-icon,
+.navbar .dropdown-menu #spanish-icon {
+  width: 32px;
+  height: 32px;
+}
+.navbar .dropdown-toggle:hover {
+  background-color: transparent !important;
+}
+.navbar a {
+  color: white !important;
+}
+.navbar .navbar-toggler {
+  width: 20px;
+  height: 20px;
+  position: relative;
+  transition: 0.5s ease-in-out;
+  border: 0 !important;
+}
+.navbar .navbar-toggler:focus,
+.navbar .navbar-toggler:active,
+.navbar .navbar-toggler-icon:focus {
+  outline: none !important;
+  box-shadow: none !important;
+  border: 0 !important;
+}
+.navbar .navbar-toggler span {
+  margin: 0;
+  padding: 0;
+}
+.navbar .toggler-icon {
+  display: block;
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background: red;
+  border-radius: 1px;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: 0.25s ease-in-out;
+}
+.navbar .middle-bar {
+  margin-top: 0px;
+}
+.navbar .navbar-toggler.collapsed .top-bar {
+  position: absolute;
+  top: 0px;
+  transform: rotate(0deg);
+}
+.navbar .navbar-toggler.collapsed .middle-bar {
+  opacity: 1;
+  position: absolute;
+  top: 10px;
+  filter: alpha(opacity=100);
+}
+.navbar .navbar-toggler.collapsed .bottom-bar {
+  position: absolute;
+  top: 20px;
+  transform: rotate(0deg);
+}
+.navbar .navbar-toggler .top-bar {
+  top: inherit;
+  transform: rotate(135deg);
+}
+.navbar .navbar-toggler .middle-bar {
+  opacity: 0;
+  top: inherit;
+  filter: alpha(opacity=0);
+}
+.navbar .navbar-toggler .bottom-bar {
+  top: inherit;
+  transform: rotate(-135deg);
+}
+.navbar .navbar-toggler.collapsed .toggler-icon {
+  background-color: hsl(0, 0%, 100%);
+}
+
+#location-container {
+  padding: 5mm 0 5mm 0;
+}
+#location-container P {
+  margin: 0;
+}
+
+#header-text-container h1 {
+  padding: 0 0 5mm 0;
+}
+
+#header-subtitle-container div p {
+  text-align: right;
+  color: hsl(0, 0%, 80%);
+}
+
+#header-image {
+  background-image: url(../../assets/imgs/header-img.jpg);
+  background-repeat: no-repeat !important;
+  background-attachment: scroll !important;
+  background-position: center center !important;
+  z-index: auto;
+  background-size: cover !important;
+  -webkit-background-size: cover !important;
+  -moz-background-size: cover !important;
+  -o-background-size: cover !important;
+  height: 720px !important;
+  width: 100% !important;
+  border-radius: 25px;
+}
+
+.main-padding-section {
+  padding: 16mm 20mm 0 20mm;
+}
+
+#personal-stats-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 150px;
+}
+#personal-stats-container span {
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  font-size: x-large;
+}
+#personal-stats-container p {
+  width: 150px;
+}
+#personal-stats-container #span-container {
+  display: flex;
+}
+#personal-stats-container #span-container p {
+  font-weight: bold;
+  font-size: x-large;
+  margin: 0;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+#steve-jobs-quote-container {
+  background-color: hsl(0, 0%, 18%);
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 20mm;
+  display: flex;
+  flex-direction: column;
+}
+#steve-jobs-quote-container #quote-title {
+  color: hsl(0, 0%, 80%) !important;
+}
+#steve-jobs-quote-container #quote-content {
+  display: flex;
+}
+#steve-jobs-quote-container #quote-content #main-parent {
+  display: flex;
+  justify-content: space-between;
+}
+#steve-jobs-quote-container #quote-content #main-parent #modal-quote {
+  display: flex;
+  width: -moz-fit-content !important;
+  width: fit-content !important;
+  height: -moz-fit-content !important;
+  height: fit-content !important;
+}
+#steve-jobs-quote-container #quote-content #main-parent #modal-quote #steve-jobs-quote {
+  text-align: left;
+  width: 70%;
+  margin: 0;
+  font-weight: 600;
+}
+#steve-jobs-quote-container #quote-content #main-parent #modal-quote i:first-child {
+  padding-right: 2mm;
+}
+#steve-jobs-quote-container #quote-content #main-parent #modal-quote i:last-child {
+  align-self: flex-end;
+}
+#steve-jobs-quote-container #quote-content #photo-parent {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+#steve-jobs-quote-container #quote-content #photo-parent #steve-jobs-portair {
+  display: flex;
+  align-items: end;
+  width: 150px;
+  height: 150px;
+  max-width: 150px;
+  max-height: 150px;
+  overflow: hidden;
+  border-radius: 1000px;
+  background-color: hsl(0, 0%, 100%);
+}
+#steve-jobs-quote-container #quote-owner {
+  margin: 16px 0 0 0;
+  color: hsl(0, 0%, 80%);
+}/*# sourceMappingURL=style.css.map */

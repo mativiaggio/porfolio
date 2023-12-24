@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MATIAS VIAGGIO</title>
+    <!-- NODE JS JQUERY -->
+    <!-- <script src="/jquery/jquery.min.js"></script> -->
+
+    <!-- GO LIVE EXTENTION JQUERY -->
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+    />
+    <!-- <link
+      rel="stylesheet"
+      href="path/to/font-awesome/css/font-awesome.min.css"
+    /> -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./styles/css/style.css" />
+    <link rel="icon" href="./assets/ico/logo.ico" type="image/svg+xml" />
+  </head>
+  <body id="body-tag">
+    <header class="main-padding-section">
+      <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top row">
+        <div class="container-fluid main-nav-div gx-0">
+          <object
+            id="svg-logo"
+            width="20.000000pt"
+            height="20.000000pt"
+            type="image/svg+xml"
+            data="./assets/svgs/logo.svg"
+          ></object>
+          <a class="navbar-brand" href="#">MATIAS VIAGGIO</a>
+          <button
+            class="navbar-toggler collapsed d-flex d-lg-none flex-column justify-content-around"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+            id="burger-button"
+          >
+            <span class="toggler-icon top-bar"></span>
+            <span class="toggler-icon middle-bar"></span>
+            <span class="toggler-icon bottom-bar"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a
+                  class="nav-link active view_my_profile nav-link-event"
+                  aria-current="page"
+                  href="#"
+                >
+                  View my profile
+                </a>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link active about_me nav-link-event"
+                  aria-current="page"
+                  href="#"
+                >
+                  About me
+                </a>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link active contact_me nav-link-event"
+                  aria-current="page"
+                  href="#"
+                >
+                  Contact me
+                </a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle language"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Language
+                </a>
+                <ul class="dropdown-menu">
+                  <li
+                    class="nav-link-event"
+                    id="english-option-container"
+                    value="english"
+                  >
+                    <a
+                      class="dropdown-item english"
+                      href="#"
+                      id="english_translation"
+                      value="english"
+                      >English</a
+                    >
+                    <img id="english-icon" src="./assets/icons/usa.png" />
+                  </li>
+                  <li
+                    class="nav-link-event"
+                    id="spanish-option-container"
+                    value="spanish"
+                  >
+                    <a
+                      class="dropdown-item spanish"
+                      href="#"
+                      id="spanish_translation"
+                      value="spanish"
+                      >Spanish</a
+                    >
+                    <img id="spanish-icon" src="./assets/icons/spain.png" />
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <section class="main-padding-section container-fluid">
+      <div id="location-container" class="row">
+        <p class="col-12 gx-0 d-flex">
+          <object
+            class="me-2"
+            data="./assets/svgs/map.svg"
+            type="image/svg+xml"
+          ></object>
+          <span class="location big-flexbox">Location</span>:
+          <span class="ms-2" id="location-span"></span>
+        </p>
+      </div>
+      <div id="header-text-container" class="row">
+        <div class="col-lg-6 col-sm-8 gx-0">
+          <h1 class="header_text">
+            I AM A DEVELOPER WHO DESIGN AND BUILD DIGITAL WEB PRODUCTS.
+          </h1>
+        </div>
+      </div>
+      <div id="header-subtitle-container" class="row">
+        <div class="col-lg-6 col-sm-4 gx-0"></div>
+        <div class="col-lg-6 col-sm-8 gx-0">
+          <p class="header_subtitle">
+            I am a web developer dedicated to crafting high-quality digital
+            products. My approach revolves around technical excellence and
+            professional aesthetics, delivering digital solutions that stand out
+            and meet the highest industry standards.
+          </p>
+        </div>
+      </div>
+      <div id="header-image-container" class="row">
+        <div id="header-image" class="col-12 gx-0"></div>
+      </div>
+    </section>
+    <section id="section-2">
+      <div id="personal-stats-container" class="col-12 gx-0">
+        <div id="projects-completed-container">
+          <div id="span-container">
+            <span id="projects-completed">0</span>
+            <p>+</p>
+          </div>
+          <p class="projects_completed">Projects completed.</p>
+        </div>
+        <div id="experience-container">
+          <span id="experience"></span>
+          <p class="of_experience">Of experience.</p>
+        </div>
+        <div id="skills-container">
+          <div id="span-container">
+            <span id="skills">0</span>
+            <p>+</p>
+          </div>
+          <p class="skills_showcased">Skills showcased.</p>
+        </div>
+      </div>
+      <div id="steve-jobs-quote-container">
+        <div id="steve-jobs-text-container">
+          <p id="quote-title">
+            // <span class="decoding_desing">Decoding the Design.</span>..
+          </p>
+          <div id="quote-content">
+            <div id="main-parent" class="gx-0">
+              <div id="modal-quote">
+                <i class="fa-solid fa-quote-left"></i>
+                <p id="steve-jobs-quote" class="steve_jobs_quote">
+                  Most people make the mistake of thinking design is what it
+                  looks like. People think it’s this veneer — that the designers
+                  are handed this box and told, “Make it look good!” That’s not
+                  what we think design is. It’s not just what it looks like and
+                  feels like. Design is how it works.
+                </p>
+                <i class="fa-solid fa-quote-right"></i>
+              </div>
+            </div>
+          </div>
+          <p id="quote-owner">- Steve Jobs, Apple.</p>
+        </div>
+        <div id="steve-jobs-pic-container">
+          <div id="photo-parent" class="gx-0">
+            <div id="steve-jobs-portair">
+              <img src="./assets/imgs/steve-jobs.jpg" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="section-3">
+      <div id="personal-work-container" class="col-12 gx-0">
+        <div id="web-work">
+          <img src="./assets/icons/domain.png" alt="web icon" />
+          <p>WEB</p>
+        </div>
+        <div id="frontend-work">
+          <img
+            src="./assets/icons/front-end-programming.png"
+            alt="front end icon"
+          />
+          <p>Front End</p>
+        </div>
+        <div id="backend-work">
+          <img src="./assets/icons/backend.png" alt="back end icon" />
+          <p>Back End</p>
+        </div>
+      </div>
+    </section>
+    <script type="module" src="../js/firebase.js"></script>
+    <script type="module" src="../js/index.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

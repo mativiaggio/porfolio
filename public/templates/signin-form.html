@@ -1,0 +1,51 @@
+<style></style>
+<head>
+  <link rel="stylesheet" href="../styles/css/style.css" />
+</head>
+<body>
+  <div id="main-signinform">
+    <div id="signin-form-container">
+      <img src="../assets/svgs/logo.svg" />
+      <form id="signin-form" action="">
+        <h4>SIGN IN</h4>
+        <input
+          id="signin-email"
+          type="email"
+          placeholder="Email"
+          autocomplete="username"
+          required
+        />
+        <div class="manual-hr"></div>
+        <!-- <label for="email">Password:</label> -->
+        <div id="password-container">
+          <input
+            id="signin-password"
+            type="password"
+            placeholder="Password"
+            autocomplete="current-password"
+            aria-describedby="passwordHelpBlock"
+            required
+          />
+          <div id="eyes-container">
+            <img
+              class="password-icon"
+              id="eye"
+              src="../assets/svgs/eye.svg"
+              alt=""
+            />
+            <img
+              class="password-icon"
+              id="eye-off"
+              src="../assets/svgs/eye-off.svg"
+              alt=""
+            />
+          </div>
+        </div>
+        <div class="manual-hr"></div>
+
+        <button class="btn btn-primary" type="submit">Login</button>
+      </form>
+    </div>
+  </div>
+  <script type="module" src="../../js/auth/signin.js"></script>
+</body>

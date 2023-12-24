@@ -1,0 +1,14 @@
+$main-body-padding: 16mm 20mm 0 20mm;
+$main-padding: 0 20mm 0 20mm;
+$main-20-padding: 20mm;
+
+@mixin bg-pic-config($attach) {
+  background-repeat: no-repeat !important;
+  background-attachment: $attach !important;
+  background-position: center center !important;
+  z-index: auto;
+  background-size: cover !important;
+  -webkit-background-size: cover !important;
+  -moz-background-size: cover !important;
+  -o-background-size: cover !important;
+}

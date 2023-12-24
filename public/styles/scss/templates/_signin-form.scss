@@ -1,0 +1,70 @@
+@use "../global/" as *;
+
+$main-form-padding: 10px;
+
+@mixin signin-form-styles {
+  height: 450px;
+  display: flex;
+  justify-content: flex-end;
+  border-radius: 10px;
+  form {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: white;
+    border-radius: 0 10px 10px 0;
+    padding: $main-form-padding;
+    h4 {
+      color: $clr-main-dark;
+      text-align: center;
+      font-weight: 700;
+    }
+    input {
+      background-color: transparent;
+      border-color: transparent;
+      border-radius: 0;
+      //   margin-bottom: 5px;
+      outline: none !important;
+      font-size: 16px;
+    }
+
+    #eyes-container {
+      height: 16px !important;
+      width: 16px !important;
+      max-height: 16px !important;
+      max-width: 16px !important;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .password-icon {
+        height: 100%;
+        width: 100%;
+        cursor: pointer;
+      }
+      #eye-off {
+        display: none;
+      }
+    }
+
+    #password-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .manual-hr {
+      height: 2px;
+      background-color: $clr-grey-light;
+      margin-bottom: 5px;
+    }
+    button {
+      background-color: $clr-grey-dark;
+      border: 2px solid $clr-grey-dark;
+      &:hover {
+        background-color: $clr-grey-light;
+        border: 2px solid $clr-grey-light;
+        color: white;
+      }
+    }
+  }
+}
