@@ -45,3 +45,10 @@ const experienceData = calculateYearsDifference(
 $("#experience").text(`${experienceData.years}y ${experienceData.days}d`);
 
 counterHtml($("#skills"), profileData.skills.length, 100);
+
+$("#web-header-title").on("click", function (event) {
+  if (event.ctrlKey && event.shiftKey) {
+    // Redirige a la página deseada
+    window.location.href = "./pages/admin-panel.html";
+  }
+});
