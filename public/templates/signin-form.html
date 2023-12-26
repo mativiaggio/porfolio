@@ -1,6 +1,11 @@
 <style></style>
 <head>
   <link rel="stylesheet" href="../styles/css/style.css" />
+  <script
+    src="https://code.jquery.com/jquery-3.7.1.js"
+    integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+    crossorigin="anonymous"
+  ></script>
 </head>
 <body>
   <div id="main-signinform">
@@ -47,5 +52,47 @@
       </form>
     </div>
   </div>
-  <script type="module" src="../js/auth/signin.js"></script>
+  <!-- <script type="module" src="../js/plugin.js"></script> -->
+  <!-- <script type="module" src="../js/auth/admin-panel.js"></script> -->
+  <!-- <script type="module" src="../js/auth/signin.js"></script> -->
+  <script type="module">
+    import { auth } from "../js/firebase.js";
+    import { signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-auth.js";
+    import { adminPanelAlert } from "../js/auth/alerts.js";
+
+    $("#signin-form").on("submit", async function (e) {
+      e.preventDefault();
+
+      const email = $("#signin-email").val();
+      const password = $("#signin-password").val();
+
+      try {
+        const userCredentials = await signInWithEmailAndPassword(
+          auth,
+          email,
+          password
+        );
+        adminPanelAlert("Login successful", "success");
+      } catch (error) {
+        console.log(error);
+        adminPanelAlert("Error", "error");
+      }
+    });
+
+    let eye = $("#eye");
+    let eyeOff = $("#eye-off");
+    let passwordInput = $("#signin-password");
+
+    eye.click(function () {
+      eye.hide();
+      eyeOff.show();
+      passwordInput.attr("type", "text");
+    });
+
+    eyeOff.click(function () {
+      eyeOff.hide();
+      eye.show();
+      passwordInput.attr("type", "password");
+    });
+  </script>
 </body>

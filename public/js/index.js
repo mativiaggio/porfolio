@@ -37,14 +37,20 @@ $("#location-span").text(
   ` ${profileData.location.province_state}, ${profileData.location.country}.`
 );
 
-counterHtml($("#projects-completed"), profileData.projects.length, 100);
+$("#projects-completed").counterHtml({
+  targetVal: profileData.projects.length,
+  duration: 100,
+});
 
 const experienceData = calculateYearsDifference(
   profileData.experience.toDate()
 );
 $("#experience").text(`${experienceData.years}y ${experienceData.days}d`);
 
-counterHtml($("#skills"), profileData.skills.length, 100);
+$("#skills").counterHtml({
+  targetVal: profileData.skills.length,
+  duration: 100,
+});
 
 $("#web-header-title").on("click", function (event) {
   if (event.ctrlKey && event.shiftKey) {

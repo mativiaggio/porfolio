@@ -15,6 +15,7 @@ $("#signin-form").on("submit", async function (e) {
       password
     );
     adminPanelAlert("Login successful", "success");
+    window.location.href = "admin-panel.html";
   } catch (error) {
     console.log(error);
     adminPanelAlert("Error", "error");
